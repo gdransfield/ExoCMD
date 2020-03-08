@@ -1,0 +1,4 @@
+__pycache__/
+model_spectra/
+.DS_Store
+.ipynb_checkpoints/

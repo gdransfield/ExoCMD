@@ -20,9 +20,9 @@ loc = os.getcwd()
 filepaths = [os.path.join(loc, 'model_spectra', (i + '.txt')) for i in Model]
 
 def downloads(url_list):
-    for filepath, url in zip(filepaths, url_list):
+    for index, (filepath, url) in enumerate(zip(filepaths, url_list)):
         if not os.path.exists(filepath):
-            print(filepath)
+            print('{} / {}'.format(index, len(filepaths)))
             visit_page = req.get(url)
             with open(filepath, 'w') as open_file:
                 open_file.write(visit_page.text)
