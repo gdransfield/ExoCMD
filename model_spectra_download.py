@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar  2 15:06:54 2020
+
+@author: Georgina Dransfield
+"""
+
+#Run this script to download all Molliere model spectra and save to folder called 'model_spectra'
+
+import os
+import requests as req
+import numpy as np
+
+
+Model = ['{0:05d}'.format(x) for x in np.arange(1,10641)]
+urls = ['http://cdsarc.u-strasbg.fr/viz-bin/nph-Plot/w/Vgraph/txt?J%2fApJ%2f813%2f47%2f.%2f' \
+            + i + '&--bitmap-size&600x400' for i in Model]
+
+
+loc = os.getcwd()
+filepaths = [os.path.join(loc, 'model_spectra', (i + '.txt.')) for i in Model]
+
+
+def downloads(url_list):
+    g = 0
+    while g < len(Model):
+        visit_page = req.get(url_list[g])
+        file = open(filepaths[g], 'w')
+        file.write(visit_page.text)
+        file.close()
+        g += 1
+    return
+
+downloads (urls)
