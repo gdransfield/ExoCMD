@@ -13,3 +13,5 @@ This will download the 10640 model spectra files from Vizie-R directly to the fo
 
 3. Click 'toggle code' to hide the blocks of code and interact with the notebook using HTML widgets.
 
+4. Click 'Run all' from the 'Cells' drop down menu at the top.
+
