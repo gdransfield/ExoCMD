@@ -1,4 +1,7 @@
+astropy
 jupyter
 matplotlib
 numpy
 requests
+scipy
+tabulate
