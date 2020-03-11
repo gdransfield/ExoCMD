@@ -1,19 +1,21 @@
 #Instructions
 
-1. Install the requirements:
+1. Clone or download the repo.
+
+2. Install the requirements:
     $ pip install -r requirements.txt
 
-2. Run the script entitled 'model_spectra_download.py'.
+3. Run the script entitled 'model_spectra_download.py'.
     $ python model_spectra_download.py
 This will download the 10640 model spectra files from Vizie-R directly to the folder called 'model_spectra'.
 
-3. Trust and then start the jupyter notebook CMD_toolkit:
+4. Trust and then start the jupyter notebook CMD_toolkit:
     $ jupyter trust CMD_toolkit.ipynb
     $ jupyter notebook CMD_toolkit.ipynb
 
-4. Click 'Run all' from the 'Cells' drop down menu on the toolbar at the top.
+5. Click 'Run all' from the 'Cells' drop down menu on the toolbar at the top.
 
-5. Plot a colour-magnitude diagram!
+6. Plot a colour-magnitude diagram!
 
 
 
