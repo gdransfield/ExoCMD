@@ -10,8 +10,8 @@
 This will download the 10640 model spectra files from Vizie-R directly to the folder called 'model_spectra'.
 
 4. Trust and then start the jupyter notebook CMD_toolkit:
-    $ jupyter trust CMD_toolkit.ipynb
-    $ jupyter notebook CMD_toolkit.ipynb
+    $ jupyter trust ExoCMD_toolkit.ipynb
+    $ jupyter notebook ExoCMD_toolkit.ipynb
 
 5. Click 'Run all' from the 'Cells' drop down menu on the toolbar at the top.
 
