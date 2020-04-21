@@ -388,7 +388,7 @@ def add (ax, col, mag, name, col_err = 0, mag_err = 0, c = '#87F9F5'):
     return ax
 
 
-def CMD_1 (pfile, bdfile, ax, colour, magnitude, adjusted = True, polynomial = True, bb09 = False, bb18 = False, 
+def ExoCMD_1 (pfile, bdfile, ax, colour, magnitude, adjusted = True, polynomial = True, bb09 = False, bb18 = False,
            bbmin = 1000, bbmax = 4000, bbinc = 1000, colourbar = False):
     abs_mags_pl1, adj_pl, pl_errs1, chem, star_names = planet_mags(pfile)
     dwarf_errs, SpT, abs_mags_dwarfs = brown_dwarfs(bdfile)
@@ -462,7 +462,7 @@ def CMD_1 (pfile, bdfile, ax, colour, magnitude, adjusted = True, polynomial = T
     return ax
 
 
-def CMD_2 (pfile, bdfile, ax, colour, magnitude, adjusted = True, bb09 = True, bb18 = False, bb04 = False, chemical_species = 0, bbmin = 1000, bbmax = 4000, bbinc = 1000,
+def ExoCMD_2 (pfile, bdfile, ax, colour, magnitude, adjusted = True, bb09 = True, bb18 = False, bb04 = False, chemical_species = 0, bbmin = 1000, bbmax = 4000, bbinc = 1000,
            colourbar = True):
     abs_mags_pl1, adj_pl, pl_errs1, chem, star_names = planet_mags(pfile)
     dwarf_errs, SpT, abs_mags_dwarfs = brown_dwarfs(bdfile)
@@ -543,7 +543,7 @@ def CMD_2 (pfile, bdfile, ax, colour, magnitude, adjusted = True, bb09 = True, b
     return ax
 
 
-def CMD_3 (pfile, bdfile, ax, colour, magnitude, adjusted = True, bb09 = True, bb18 = False, bb04 = False, chemical_species = 0, 
+def ExoCMD_3 (pfile, bdfile, ax, colour, magnitude, adjusted = True, bb09 = True, bb18 = False, bb04 = False, chemical_species = 0,
            bbmin = 1000, bbmax = 4000, bbinc = 1000, highlight = 0, colourbar = True):
     abs_mags_pl1, adj_pl, pl_errs1, chem, star_names = planet_mags(pfile)
     dwarf_errs, SpT, abs_mags_dwarfs = brown_dwarfs(bdfile)
@@ -706,7 +706,7 @@ def colorbar(size):
     return cbar
     
 
-def CMD_synth (pfile, ax, colour, magnitude, adjusted = True, polynomial = True, bb09 = True, bb18 = True, chemical_species = 0,
+def ExoCMD_synth (pfile, ax, colour, magnitude, adjusted = True, polynomial = True, bb09 = True, bb18 = True, chemical_species = 0,
                synth_file = 'synth_mags.txt', bbmin = 1000, bbmax = 4000, bbinc = 1000,
                colourbar = True):
     abs_mags_pl1, adj_pl, pl_errs1, chem, star_names = planet_mags(pfile)
@@ -836,7 +836,7 @@ newcmp_CO = ListedColormap(newcolors, name='OrangeBlue')
 
 
 
-def CMD_model (pfile, bdfile, ax, colour, magnitude, SpT=50, FeH=50, logg=50, CO=50, Teff=50, planets = True, 
+def ExoCMD_model (pfile, bdfile, ax, colour, magnitude, SpT=50, FeH=50, logg=50, CO=50, Teff=50, planets = True,
                add_brown_dwarfs = True, adjusted = True, 
                synth_file = 'synth_mags.txt', 
                bbmin = 1000, bbmax = 4000, bbinc = 1000, colour_by = 'C/O Ratio'):

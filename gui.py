@@ -1,7 +1,7 @@
 
 import ipywidgets as widgets
 import matplotlib.pyplot as plt
-import CMD as CMD
+import ExoCMD as ExoCMD
 from IPython.display import clear_output
 from IPython.display import Javascript
 
@@ -830,15 +830,15 @@ def on_button_clicked(b):
         else:
             fig, ax = plt.subplots(1, 1, figsize =(8, 8))
         if tab.selected_index == 0:
-            CMD.CMD_1 (planets_path.value, BD_path.value, ax, colour, mag, adjusted = adjusted.value, 
+            ExoCMD.ExoCMD_1 (planets_path.value, BD_path.value, ax, colour, mag, adjusted = adjusted.value,
                        colourbar = colourbar.value, bb09 = bb09.value, 
                       bbmin=bbmin.value, bbmax=bbmax.value, bbinc=bbinc.value, polynomial=poly.value)
         elif tab.selected_index == 1:
-            CMD.CMD_2 (planets_path.value, BD_path.value, ax, colour, mag, adjusted = adjusted.value, 
+            ExoCMD.ExoCMD_2 (planets_path.value, BD_path.value, ax, colour, mag, adjusted = adjusted.value,
                        colourbar = colourbar.value, bb09 = bb09.value, 
                       bbmin=bbmin.value, bbmax=bbmax.value, bbinc=bbinc.value)
         elif tab.selected_index == 2:
-            CMD.CMD_3 (planets_path.value, BD_path.value, ax, colour, mag, adjusted = adjusted.value, 
+            ExoCMD.ExoCMD_3 (planets_path.value, BD_path.value, ax, colour, mag, adjusted = adjusted.value,
                        colourbar = colourbar.value, bb09 = bb09.value, 
                       bbmin=bbmin.value, bbmax=bbmax.value, bbinc=bbinc.value, highlight=[[hl1.value.upper(), c1.value]
                                                                                         , [hl2.value.upper(), c2.value]
@@ -852,11 +852,11 @@ def on_button_clicked(b):
                                                                                          , [hl10.value.upper(), c10.value]])
         elif tab.selected_index == 3:
             fig.set_size_inches(8, 9.5, forward = True)
-            CMD.CMD_model (planets_path.value, BD_path.value, ax, colour, mag, adjusted = adjusted.value, SpT=SpTs, FeH=FeHs,
+            ExoCMD.ExoCMD_model (planets_path.value, BD_path.value, ax, colour, mag, adjusted = adjusted.value, SpT=SpTs, FeH=FeHs,
                            logg=loggs, CO=COs, Teff=Teffs, colour_by = colour_by.value)
             
         elif tab.selected_index == 4:
-            CMD.CMD_synth(planets_path.value, ax, colour_synth, mag_synth, adjusted = adjusted.value, 
+            ExoCMD.ExoCMD_synth(planets_path.value, ax, colour_synth, mag_synth, adjusted = adjusted.value,
                           colourbar = colourbar.value, bb09 = bb09.value, bbmin = bbmin.value, bbmax = bbmax.value,
                          bbinc = bbinc.value, bb18 = False, synth_file = 'synth_mags.txt')
 
